@@ -49,18 +49,11 @@
     })
     email.addEventListener('change',function(e){
         console.log(e.target);
-        const emailRegex = /^([a-zA-ZÀ-ÖØ-öø-ÿ0-9]+@[a-zA-ZÀ-ÖØ-öø-ÿ0-9]+\.[a-zA-ZÀ-ÖØ-öø-ÿ0-9])/g;
+        const emailRegex = /^([a-zA-ZÀ-ÖØ-öø-ÿ])/g;
         objectValid.correo = e.target.value.match(emailRegex) ? true : false;
         console.log(Object.values(objectValid));
     })
-    city.addEventListener('change', function(e){
-        if(city.value === 'Selecciona'){
-            objectValid.ciudad = false;
-        }else{
-            objectValid.ciudad = true;
-        }
-        console.log(Object.values(objectValid));
-    })
+    city
 
     policity.addEventListener('change',function(e){
         objectValid.politica = e.target.checked === true ? true : false;
